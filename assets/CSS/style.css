@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --bg-color: hsl(204, 43%, 93%);
+  --bg-card1: hsl(179, 62%, 43%);
+  --bg-card2: hsl(179, 47%, 52%);
+  --btn-color: hsl(71, 73%, 54%);
+  --text-color: hsl(218, 22%, 67%);
+  --text-font: 'Karla', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--bg-color);
+  font-family: var(--text-font);
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: 100%;
+  max-width: 375px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  margin: auto;
+}
+
+.community {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.community__title {
+  padding: 10px 5px;
+  color: var(--bg-card1);
+  font-size: large;
+}
+
+.community__subtitle {
+  padding: 10px 5px;
+  color: var(--btn-color);
+  font-size: medium;
+}
+
+.community__text {
+  padding: 10px 5px;
+  color: var(--text-color);
+}
+
+.subscription {
+  padding: 20px;
+  background-color: var(--bg-card1);
+  color: white;
+}
+
+.subscription__titile {
+  padding: 10px 5px;
+  font-size: large;
+}
+
+.subscription__price {
+  padding: 5px;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.price {
+  color: white;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.subscription__text {
+  padding: 10px 5px;
+  font-size: medium;
+}
+
+.subscription__btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--btn-color);
+  color: white;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.us {
+  padding: 20px;
+  background-color: var(--bg-card2);
+  border-radius: 0 0 5px 5px;
+}
+
+.us__title {
+  padding: 10px 5px;
+  font-size: large;
+  color: white;
+}
+
+.us__list {
+  padding: 10px 5px;
+  font-size: medium;
+  color: white;
+}
+
+@media screen and (min-width: 640px) {
+
+  .body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*  height: 100vh; */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* grid-template-rows: 1fr 1fr; */
+    /* justify-content: center;
+    align-items: center; */
+    place-items: center;
+    width: 100%;
+    max-width: 990px;
+    /* height: 100%; */
+  }
+
+  .community {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    grid-column: 1/3;
+    /* width: 100%; */
+  }
+
+  .community__title {
+    font-size: 2rem;
+  }
+
+  .community__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1/2;
+    align-items: start;
+    width: 100%;
+    border-radius: 0 0 0 10px;
+
+  }
+
+  .subscription__titile {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .subscription__btn {
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  .us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    grid-column: 2/3;
+    width: 100%;
+    border-radius: 0 0 10px 0;
+  }
+
+  .us__title {
+    font-size: 2rem;
+  }
+}
